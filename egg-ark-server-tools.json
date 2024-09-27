@@ -4,7 +4,7 @@
         "version": "PTDL_v2",
         "update_url": null
     },
-    "exported_at": "2024-09-27T00:34:41-05:00",
+    "exported_at": "2024-09-27T01:10:16-05:00",
     "name": "Ark-Server-Tools",
     "author": "Ryan@ryandward.com",
     "description": "This tool allows you to manage any ARK: Survival Evolved linux server without having to remember long commands. It provides a lot of features, to get the full list check https:\/\/github.com\/arkmanager\/ark-server-tools. This runs in a bash terminal to give you more control over the docker container as this tool requires to be ran in bash and not a full entrypoint shell.",
@@ -16,7 +16,7 @@
     "startup": "{{INSTALL_ARK}}",
     "config": {
         "files": "{}",
-        "startup": "{\r\n    \"done\": \"Setting breakpad minidump\",\r\n    \"done2\": \"The server is now running\",\r\n    \"done3\": \"Ark Server Tools Ready\",\r\n    \"done4\": \"Installing ARK server\"\r\n}",
+        "startup": "{\r\n    \"done\": \"Setting breakpad minidump\",\r\n    \"done2\": \"The server is now running\",\r\n    \"done3\": \"Ark Server Tools Ready\",\r\n    \"done4\": \"Installing ARK server\",\r\n    \"done5\": \"Running command 'install' for instancer\"\r\n}",
         "logs": "{}",
         "stop": "^C"
     },

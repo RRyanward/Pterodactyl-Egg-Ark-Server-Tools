@@ -1,0 +1,62 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v2",
+        "update_url": null
+    },
+    "exported_at": "2024-09-26T22:31:12-05:00",
+    "name": "Ark-Server-Tools",
+    "author": "Ryan@ryandward.com",
+    "description": "This tool allows you to manage any ARK: Survival Evolved linux server without having to remember long commands. It provides a lot of features, to get the full list check https:\/\/github.com\/arkmanager\/ark-server-tools. This runs in a bash terminal to give you more control over the docker container as this tool requires to be ran in bash and not a full entrypoint shell.",
+    "features": null,
+    "docker_images": {
+        "rryanward\/arkservertools": "rryanward\/arkservertools"
+    },
+    "file_denylist": [],
+    "startup": "{{INSTALL_ARK}}",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"Setting breakpad minidump\",\r\n    \"done2\": \"The server is now running\",\r\n    \"done3\": \"Ark Server Tools Ready\",\r\n    \"done4\": \"Installing ARK server\"\r\n}",
+        "logs": "{}",
+        "stop": "^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": null,
+            "container": "alpine:3.4",
+            "entrypoint": "ash"
+        }
+    },
+    "variables": [
+        {
+            "name": "Install Ark Servers",
+            "description": "Examples: https:\/\/github.com\/arkmanager\/ark-server-tools\r\nDownloads and installs (or validates an existing install) of the ARK server\r\ninstall",
+            "env_variable": "INSTALL_ARK",
+            "default_value": "{{INSTALL_ARK}}",
+            "user_viewable": false,
+            "user_editable": true,
+            "rules": "required|string|max:50",
+            "field_type": "text"
+        },
+        {
+            "name": "Run Ark Servers",
+            "description": "Example: https:\/\/github.com\/arkmanager\/ark-server-tools\r\nAll of the following commands take arguments to specify one or more instances, with the special \r\nSelect just the one Instance\r\n@main \r\nSelect All Instance\r\n@all",
+            "env_variable": "RUN_ARK",
+            "default_value": "{{RUN_ARK}}",
+            "user_viewable": false,
+            "user_editable": true,
+            "rules": "required|string|max:50",
+            "field_type": "text"
+        },
+        {
+            "name": "Update Ark Servers",
+            "description": "Example: https:\/\/github.com\/arkmanager\/ark-server-tools\r\nUpdates an install of the ARK server (or installs it if it\u2019s not already installed)",
+            "env_variable": "UPDATE_ARK",
+            "default_value": "{{UPDATE_ARK}}",
+            "user_viewable": false,
+            "user_editable": true,
+            "rules": "required|string|max:50",
+            "field_type": "text"
+        }
+    ]
+}

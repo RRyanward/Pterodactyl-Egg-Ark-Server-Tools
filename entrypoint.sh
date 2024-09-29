@@ -12,7 +12,7 @@ echo "Adding install loop file" | tee stop-install-loop.sh
 echo "Ark Server Tools Ready"
 
 # Replace Startup Variables
-MODIFIED_STARTUP=`eval echo $(echo ./arkmanger ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g')`
+MODIFIED_STARTUP=`eval echo $(echo ./arkmanger ${STARTUP} --verbose | sed -e 's/{{/${/g' -e 's/}}/}/g')`
 echo ":/home/container$ ${MODIFIED_STARTUP}"
 
 # Run the Server
